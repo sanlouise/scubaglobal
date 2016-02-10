@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :schools
   root 'pages#home'
   
   get 'pages/about'
