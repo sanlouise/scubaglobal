@@ -19,6 +19,8 @@ gem 'fog'
 gem 'figaro'
 # To resize images
 gem 'mini_magick'
+# For user functionality
+gem 'devise'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
