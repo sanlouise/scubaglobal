@@ -1,9 +1,8 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col l6 offset-l3 s12 card-panel teal lighten-2 center">
     <% flash.each do |name, msg| %>
       <% if msg.is_a?(String) %>
         <div class="alert alert-<%= name == "notice" ? "success" : "danger" %> alert-dismissable">
-          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
           <%= content_tag :div, msg, :id => "flash_#{name}" %>
         </div>
       <% end %>
