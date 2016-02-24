@@ -1,27 +1,23 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to "ScubaGlobe", root_path, class:"navbar-brand", id: "logo" %>
-    </div>
+<header>
+  <nav>
+    <div class="nav-wrapper blue darken-3">
+      <a href="/" class="brand-logo center">ScubaGlobal</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
+      <ul class="right hide-on-med-and-down white-text">
+        <li><%= link_to "About", "#" %></li>
+        <li><%= link_to "Contact", "#" %></li>
+        
+        <% if user_signed_in? %>
+          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        
-          <li><%= link_to "All Stories", "#" %></li>
-          <li><%= link_to "All Users", "#" %></li>
-          <li><%= link_to "Travel Categories", "#" %></li>
-        
-          
+        <% else %>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Log In", new_user_session_path %></li>
+        <% end %>
+
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="side-nav" id="mobile-demo">
         <li><%= link_to "About", "#" %></li>
         <li><%= link_to "Contact", "#" %></li>
         
@@ -35,5 +31,8 @@
         <% end %>
       </ul>
     </div>
-  </div><!-- /.container-fluid -->
-</nav>
+  </nav>
+</header>
+
+
+

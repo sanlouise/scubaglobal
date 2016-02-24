@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>ScubaGlobe</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <!-- Latest compiled and minified JQuery -->
-  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 
   <%= csrf_meta_tags %>
-  <%= render 'layouts/bootstrap' %>
 </head>
 <body>
 
 <%= render 'layouts/nav' %>
-<%= render 'layouts/alerts' %>'
-
-
-
-<%= yield %>
+<div class="container">
+  <%= render 'layouts/alerts' %>'
+  <%= yield %>
+</div>
 <%= render 'layouts/footer' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
