@@ -12,12 +12,19 @@
 </head>
 <body>
 
-<%= render 'layouts/nav' %>
-<div class="container">
-  <%= render 'layouts/alerts' %>
-  <%= yield %>
-</div>
-<%= render 'layouts/footer' %>
+  <header>
+    <%= render 'layouts/nav' %>
+  </header>
+  
+  <main>
+    <div class="container">
+      <%= render 'layouts/alerts' %>
+      <%= yield %>
+    </div>
+  </main>
+  
+  <%= render 'layouts/footer' %>
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
