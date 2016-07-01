@@ -1,5 +1,14 @@
-<div class="center-align">
-  <h1>ScubaGlobe</h1>
-  <h3>Find all Dive Schools in a Click.</h3>
-  <%= link_to "Browse", schools_path, class: "btn btn-primary btn-lg" %>
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container black-bg col s12 m8 offset-m2 l4 offset-l4">
+      <h1 class="header center light-blue-text text-lighten-2">Scubaglobe</h1>
+      <div class="row center">
+        <h5 class="header white-text">Find all Dive Schools in a Click</h5>
+      </div>
+      <div class="row center">
+        <%= link_to "Browse", schools_path, class: "btn btn-primary btn-lg" %>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><%= image_tag("scuba.jpg", alt: "Homepage image", class: "responsive-img") %></div>
 </div>
